@@ -8,9 +8,10 @@ on:
     workflow_dispatch:
 
 jobs: 
-    echo:
+    echojob:
         runs-on: ubuntu-latest
         steps:
             - name: Show the trigger
-              run: "Triggered by event : ${{ github.event_name }}"
+              run: |
+                echo "Triggered by event : ${{ github.event_name }}"
     
